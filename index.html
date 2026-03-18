@@ -14,11 +14,13 @@
     </header>
     <main>
         <form action="php/calcul.php" method="post">
-            <label for="nom">Nombre 1 : </label>
-            <input type="number" name="nom" id="nom"><br><br>
-            <label for="nom2">Nombre 2 : </label>
-            <input type="number" name="nom2" id="nom2"><br><br>
-            <div>
+            <label for="nom">Salaire</label><br>
+            <input type="number" name="nom" id="nom"><br>
+            <label for="nom2">pourcentage d'impot</label><br>
+            <input type="number" name="nom2" id="nom2"><br>
+            <label for="nom3">pourcentage de contribution</label><br>
+            <input type="number" name="nom3" id="nom3"><br>
+            <div style="display: none;">
                 <label for="addition" class="label">
                 <input type="radio" name="signe"  id="addition"  value="addition"> <span>+</span></label>
                 <label for="sousstraction" class="label">
@@ -30,8 +32,13 @@
                 <label for="modulo" class="label">
                 <input type="radio" name="signe" id="modulo"  value="modulo"> <span>%</span></label>
             </div>
-            <button type="submit" >Envoyer</button>  
+            <button type="submit" >calculer</button>  
         </form>
+        <div class="resultat">
+            <span>vos impot sont de <span class="prix">00.0%</span></span><br>
+            <span>votre contribution est de <span class="prix">00.0%</span></span><br>
+            <span>votre salaire net est de <span class="prix">00.0Fc</span></span>
+        </div>
     </main>
     <footer>
         <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>

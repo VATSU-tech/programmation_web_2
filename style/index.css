@@ -64,3 +64,19 @@ button{
 .label > span{
   font-size: 1.2rem;
 }
+
+.resultat{
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #e2e2e2;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.prix{
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
