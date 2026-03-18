@@ -13,13 +13,13 @@
         <h1>Programmation web 2</h1>
     </header>
     <main>
-        <form action="php/calcul.php" method="post">
+        <form method="post" action=''>
             <label for="nom">Salaire</label><br>
-            <input type="number" name="nom" id="nom"><br>
+            <input type="number" name="SalBrut" id="nom"><br>
             <label for="nom2">pourcentage d'impot</label><br>
-            <input type="number" name="nom2" id="nom2"><br>
+            <input type="number" name="impot" id="nom2"><br>
             <label for="nom3">pourcentage de contribution</label><br>
-            <input type="number" name="nom3" id="nom3"><br>
+            <input type="number" name="cotisation" id="nom3"><br>
             <div style="display: none;">
                 <label for="addition" class="label">
                 <input type="radio" name="signe"  id="addition"  value="addition"> <span>+</span></label>
@@ -32,20 +32,34 @@
                 <label for="modulo" class="label">
                 <input type="radio" name="signe" id="modulo"  value="modulo"> <span>%</span></label>
             </div>
-            <button type="submit" >calculer</button>  
+            <button type="submit" name='Calculer' >calculer</button>  
         </form>
-        <div class="resultat">
-            <span>vos impot sont de <span class="prix">00.0%</span></span><br>
-            <span>votre contribution est de <span class="prix">00.0%</span></span><br>
-            <span>votre salaire net est de <span class="prix">00.0Fc</span></span>
-        </div>
+        
+<?php
+        if (isset($_POST['Calculer'])) {
+            $SalaireBrut=$_POST['SalBrut'];
+            $Impot = $_POST['impot'];
+            $Cotisation = $_POST['cotisation'];
+            if (!empty($SalaireBrut) && !empty($Impot) && !empty($Cotisation)) {
+                $impotVal = ($SalaireBrut*$Impot)/100;
+                $CotisationVal = (($SalaireBrut*$Cotisation)/100);
+                $SalaireNet = $SalaireBrut-($impotVal+$CotisationVal);
+                // echo "Le montant de votre impot est : ",$impotVal,"<br>";
+                // echo "Le montant de votre cotisation est : ", $CotisationVal,"<br>";
+                // echo "Le montant de votre Salaire Net est : ",$SalaireNet;
+            echo '<div class="resultat"><span>vos impot sont de <span class="prix">'.$impotVal.'%</span></span><br>';
+            echo '<span>votre contribution est de <span class="prix">'.$CotisationVal.'%</span></span><br>';
+            echo '<span>votre salaire net est de <span class="prix">'.$SalaireNet.'Fc</span></span></div>';
+            }
+            else{
+                echo "<h2 class='error'>Veuillez remplir tous les champs</h2>";
+            }
+        }
+    ?>
+        
     </main>
     <footer>
         <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
     </footer>
 </body>
 </html>
-<?php
-//recuperont cequi est dans le formulaire
-// echo " la somme de ".$nom. " et ".$nom2. " est : ".($nom+$nom2);
-?>
