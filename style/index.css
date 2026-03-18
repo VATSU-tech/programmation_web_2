@@ -7,10 +7,24 @@
 
 body{
   display: flex;
-  justify-content: center;
+  justify-content:space-between;
+  flex-direction: column;
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+}
+
+header, footer{
+  background-color: #49004f;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
 
 form{
