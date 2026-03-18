@@ -44,9 +44,6 @@
                 $impotVal = ($SalaireBrut*$Impot)/100;
                 $CotisationVal = (($SalaireBrut*$Cotisation)/100);
                 $SalaireNet = $SalaireBrut-($impotVal+$CotisationVal);
-                // echo "Le montant de votre impot est : ",$impotVal,"<br>";
-                // echo "Le montant de votre cotisation est : ", $CotisationVal,"<br>";
-                // echo "Le montant de votre Salaire Net est : ",$SalaireNet;
             echo '<div class="resultat"><span>vos impot sont de <span class="prix">'.$impotVal.'%</span></span><br>';
             echo '<span>votre contribution est de <span class="prix">'.$CotisationVal.'%</span></span><br>';
             echo '<span>votre salaire net est de <span class="prix">'.$SalaireNet.'Fc</span></span></div>';
