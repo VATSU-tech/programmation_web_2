@@ -39,3 +39,14 @@ button{
   margin: 0 auto;
   display: block;
 }
+
+.label{
+  background-color: #ccc;
+  padding: 5px 10px;
+  border-radius: 0.5rem;
+  margin-right: 10px;
+}
+
+.label > span{
+  font-size: 1.2rem;
+}

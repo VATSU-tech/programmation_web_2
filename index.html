@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php</title>
 </head>
 <body>    
-    <form action="php/calcul.php" method="get">
-        <label for="nom">Nom : </label>
-        <input type="number" name="nom" id="nom"><br><br>
-        <label for="nom2">Nom2 : </label>
-        <input type="number" name="nom2" id="nom2"><br><br>
-        <button type="submit">Envoyer</button>
-
-    </form>
+    <!-- <head>
+        <h1>Programmation web 2</h1>
+    </head> -->
+    <main>
+        <form action="php/calcul.php" method="get">
+            <label for="nom">Nombre 1 : </label>
+            <input type="number" name="nom" id="nom"><br><br>
+            <label for="nom2">Nombre 2 : </label>
+            <input type="number" name="nom2" id="nom2"><br><br>
+            <div>
+                <label for="radio1" class="label">
+                <input type="radio" name="radio" id="radio1"> <span>+</span></label>
+                <label for="radio2" class="label">
+                <input type="radio" name="radio" id="radio2"> <span>-</span> </label>
+            </div>
+            <button type="submit" >Envoyer</button>  
+        </form>
+    </main>
+    <!-- <footer>
+        <a href="#">VATSU-tech <i class="fa "></i></a>
+    </footer> -->
 </body>
 </html>
