@@ -1,7 +1,51 @@
-<?php
+<!DOCTYPE html>
+<html lang="fr">
 
-$nom = 'VATSU';
-echo "Bonjour " . $nom . " je suis ";
-$nom = 'PHP';
-echo $nom . " et je suis un langage de programmation.";
-?>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/index.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>php</title>
+</head>
+
+<body>
+    <header>
+        <h1>Programmation web 2</h1>
+    </header>
+    <main>
+        <form method="post" action=''>
+            <label for="nom">Matricule</label><br>
+            <input type="text" name="SalBrut" id="nom"><br>
+            <label for="nom2">Noms</label><br>
+            <input type="text" name="impot" id="nom2"><br>
+            <label for="nom3">age</label><br>
+            <input type="number" name="cotisation" id="nom3"><br>
+            <div style="display: none;">
+                <label for="addition" class="label">
+                    <input type="radio" name="signe" id="addition" value="addition"> <span>+</span></label>
+                <label for="sousstraction" class="label">
+                    <input type="radio" name="signe" id="sousstraction" value="sousstraction"> <span>-</span> </label>
+                <label for="division" class="label">
+                    <input type="radio" name="signe" id="division" value="division"> <span>/</span></label>
+                <label for="multiplication" class="label">
+                    <input type="radio" name="signe" id="multiplication" value="multiplication"> <span>*</span> </label>
+                <label for="modulo" class="label">
+                    <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label>
+                </div>
+            <button type="submit" name='Calculer'>calculer</button>
+        </form>
+
+        <?php
+        ?>
+
+    </main>
+    <footer>
+        <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
+    </footer>
+</body>
+
+</html>
