@@ -24,19 +24,23 @@
             <input type="text" name="impot" id="nom2"><br>
             <label for="nom3">age</label><br>
             <input type="number" name="cotisation" id="nom3"><br>
-            <div style="display: none;">
+            <div >
                 <label for="addition" class="label">
-                    <input type="radio" name="signe" id="addition" value="addition"> <span>+</span></label>
+                    <input type="radio" name="signe" id="addition" value="masculin"> <span>Masculin</span></label>
                 <label for="sousstraction" class="label">
-                    <input type="radio" name="signe" id="sousstraction" value="sousstraction"> <span>-</span> </label>
-                <label for="division" class="label">
+                    <input type="radio" name="signe" id="sousstraction" value="feminin"> <span>Feminin</span> </label>
+                <!-- <label for="division" class="label">
                     <input type="radio" name="signe" id="division" value="division"> <span>/</span></label>
                 <label for="multiplication" class="label">
                     <input type="radio" name="signe" id="multiplication" value="multiplication"> <span>*</span> </label>
                 <label for="modulo" class="label">
-                    <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label>
+                    <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label> -->
                 </div>
-            <button type="submit" name='Calculer'>calculer</button>
+                <div class="buttons">
+                    <button name="envoyer">Evoyer</button>
+                    <button name='modifier'>Modifier</button>
+                    <button name='supprimer'>Supprimer</button>
+                </div>
         </form>
 
         <?php
