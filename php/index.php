@@ -26,9 +26,9 @@
             <input type="number" name="age" id="nom3"><br>
             <div >
                 <label for="addition" class="label">
-                    <input type="radio" name="signe" id="addition" value="masculin"> <span>Masculin</span></label>
+                    <input type="radio" name="sexe" id="addition" value="masculin"> <span>Masculin</span></label>
                 <label for="sousstraction" class="label">
-                    <input type="radio" name="signe" id="sousstraction" value="feminin"> <span>Feminin</span> </label>
+                    <input type="radio" name="sexe" id="sousstraction" value="feminin"> <span>Feminin</span> </label>
                 <!-- <label for="division" class="label">
                     <input type="radio" name="signe" id="division" value="division"> <span>/</span></label>
                 <label for="multiplication" class="label">
