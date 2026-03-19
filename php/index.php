@@ -19,11 +19,11 @@
     <main>
         <form method="post" action=''>
             <label for="nom">Matricule</label><br>
-            <input type="text" name="SalBrut" id="nom"><br>
+            <input type="text" name="matricule" id="nom"><br>
             <label for="nom2">Noms</label><br>
-            <input type="text" name="impot" id="nom2"><br>
+            <input type="text" name="noms" id="nom2"><br>
             <label for="nom3">age</label><br>
-            <input type="number" name="cotisation" id="nom3"><br>
+            <input type="number" name="age" id="nom3"><br>
             <div >
                 <label for="addition" class="label">
                     <input type="radio" name="signe" id="addition" value="masculin"> <span>Masculin</span></label>
