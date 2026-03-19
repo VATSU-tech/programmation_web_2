@@ -22,12 +22,14 @@
             <input type="text" name="nom" id="nom"><br>
             <label for="nom2">Categorie</label><br>
             <select name="categorie" id="categorie">
-                <option value="1">papa</option>
-            </select>
+                <option value="aliment">aliment</option>
+                <option value="champ">champ</option>
+                <option value="industriel">industriel</option>
+            </select><br>
             <!-- <input type="select" name="categorie" id="nom2"><br> -->
             <label for="nom3">Pu</label><br>
-            <input type="number" name="age" id="nom3"><br>
-            <div >
+            <input type="number" name="pu" id="nom3"><br>
+            <div style="display: none;">
                 <label for="addition" class="label">
                     <input type="radio" name="sexe" id="addition" value="masculin"> <span>Masculin</span></label>
                 <label for="sousstraction" class="label">
@@ -38,12 +40,12 @@
                     <input type="radio" name="signe" id="multiplication" value="multiplication"> <span>*</span> </label>
                 <label for="modulo" class="label">
                     <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label> -->
-                </div>
-                <div class="buttons">
-                    <button name="envoyer">Evoyer</button>
-                    <!-- <button name='modifier'>Modifier</button>
+            </div>
+            <div class="buttons">
+                <button name="envoyer" type="submit">Evoyer</button>
+                <!-- <button name='modifier'>Modifier</button>
                     <button name='supprimer'>Supprimer</button> -->
-                </div>
+            </div>
         </form>
 
         <?php
