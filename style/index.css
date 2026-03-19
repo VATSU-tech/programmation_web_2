@@ -51,6 +51,7 @@ input, select{
   fill: none;
   border: 1px solid #ccc;
   padding: 10px;
+  width: 100%;
   border-radius: 0.5rem;
   margin-bottom: 15px;
 }
