@@ -17,7 +17,7 @@
         <h1>Programmation web 2</h1>
     </header>
     <main>
-        <form method="post" action=''>
+        <form method="post" action='./insertion.php'>
             <label for="nom">Matricule</label><br>
             <input type="text" name="matricule" id="nom"><br>
             <label for="nom2">Noms</label><br>
