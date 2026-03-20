@@ -29,6 +29,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
                 $id = $supprimer->execute(array($id));
             }
             break;
+        case "modifier":
+            if($id){
+                $sql = "UPDATE t_etudiant SET nom=?, sexe=?, nationalite=?, age=?, telephone=? WHERE id=?";
+                $modifier = $connexion->prepare($sql);
+                $modifier->execute(array($nom, $sexe, $nationalite, $age, $telephone, $id));
+            }
+            break;
     }
 }
 
