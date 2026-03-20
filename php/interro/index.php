@@ -14,7 +14,15 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
     $sexe = $_POST["sexe"];
     $nationalite = $_POST["nationalite"];
     $age = $_POST["age"];
-    $tel = $_POST["telephone"];
+    $telephone = $_POST["telephone"];
+
+    switch($_POST["action"]) {
+        case "enregistrer":
+            $sql = "INSERT INTO t_etudiant(nom, sexe, nationalite, age, telephone) VALUES(?, ?, ?, ?, ?)";
+            $enregistrer = $connexion->prepare($sql);
+            $enregistrer->execute(array($nom, $sexe, $nationalite, $age, $telephone) );
+            break;
+    }
 }
 
 ?><!DOCTYPE html>
