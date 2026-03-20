@@ -8,42 +8,15 @@ try {
     die("Erreur de connexion : " . $e->getMessage());
 }
 
-// Logique de traitement
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
-    $id = $_POST['id'];
-    $nom = $_POST['nom'];
-    $sexe = $_POST['sexe'];
-    $nationalite = $_POST['nationalite'];
-    $age = $_POST['age'];
-    $tel = $_POST['telephone'];
-
-    switch ($_POST['action']) {
-        case 'enregistrer':
-            $sql = "INSERT INTO t_etud(nom, sexe, nationalite, age, tel) VALUES(?, ?, ?, ?, ?)";
-            $stmt = $connexion->prepare($sql);
-            $stmt->execute([$nom, $sexe, $nationalite, $age, $tel]);
-            echo "Étudiant ajouté !";
-            break;
-
-        case 'modifier':
-            if ($id) {
-                $sql = "UPDATE t_etud SET nom=?, sexe=?, nationalite=?, age=?, tel=? WHERE id=?"; // Adaptez 'id' au nom de votre colonne clé primaire
-                $stmt = $connexion->prepare($sql);
-                $stmt->execute([$nom, $sexe, $nationalite, $age, $tel, $id]);
-                echo "Mise à jour réussie !";
-            }
-            break;
-
-        case 'supprimer':
-            if ($id) {
-                $sql = "DELETE FROM t_etud WHERE id=?";
-                $stmt = $connexion->prepare($sql);
-                $stmt->execute([$id]);
-                echo "Étudiant supprimé !";
-            }
-            break;
-    }
+if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
+    $id = $_POST["id"];
+    $nom = $_POST["nom"];
+    $sexe = $_POST["sexe"];
+    $nationalite = $_POST["nationalite"];
+    $age = $_POST["age"];
+    $tel = $_POST["telephone"];
 }
+
 ?><!DOCTYPE html>
 <html lang="fr">
 
@@ -64,6 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     </header>
     <main>
         <form method="post" action=''>
+            <label for="id">Id de l'etudiant</label><br>
+            <input type="text" name="id" id="id" placeholder="ex : 2 (pour modifier/supprimer)"><br>
             <label for="nom">Nom</label><br>
             <input type="text" name="nom" id="nom" placeholder="ex : KATSUVA MALAMBO VATSU"><br>
             <div class="radio">
