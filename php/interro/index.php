@@ -17,7 +17,7 @@
         <h1>Programmation web 2</h1>
     </header>
     <main>
-        <form method="post" action='./insertion.php'>
+        <form method="post" action=''>
             <label for="nom">Nom</label><br>
             <input type="text" name="nom" id="nom" placeholder="ex : KATSUVA MALAMBO VATSU"><br>
             <div class="radio">
@@ -38,20 +38,19 @@
             <!-- <input type="select" name="categorie" id="nom2"><br> -->
             <label for="age">age</label><br>
             <input type="number" name="age" id="age" placeholder="ex : 21"><br>
-            <label for="age">Tel</label><br>
-            <input type="number" name="tel" id="tel" placeholder="ex : +243 000 000 000"><br>
+            <label for="telephone">Telephone</label><br>
+            <input type="number" name="telephone" id="telephone" placeholder="ex : +243 000 000 000"><br>
             
             <div class="buttons">
-                <button name="envoyer">Evoyer</button>
-                <button name='modifier'>Modifier</button>
-                <button name='supprimer'>Supprimer</button>
-                <button name='afficher'>afficher</button>
+                <button name="action" value="enregistrer">Enregistrer</button>
+                <button name='action' value="modifier">Modifier</button>
+                <button name='action' value="supprimer">Supprimer</button>
             </div>
         </form>
 <?php 
 // Activation des erreurs pour le débogage
 try {
-    $connexion = new PDO("mysql:host=localhost;dbname=db_etdiant",'root','', [
+    $connexion = new PDO("mysql:host=localhost;dbname=DB_crud_php",'root','', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 } catch (PDOException $e) {
@@ -60,7 +59,7 @@ try {
 
 // Logique de traitement
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
-    $id = $_POST['id_etudiant'];
+    $id = $_POST['id'];
     $nom = $_POST['nom'];
     $sexe = $_POST['sexe'];
     $nationalite = $_POST['nationalite'];
