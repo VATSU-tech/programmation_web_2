@@ -47,7 +47,7 @@ form{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input, select{
+input[type='text'],input[type='number'], select{
   fill: none;
   border: 1px solid #ccc;
   padding: 10px;
