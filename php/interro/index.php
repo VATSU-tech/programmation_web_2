@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../../../style/index.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <link rel="stylesheet" href="../../style/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,32 +19,33 @@
     <main>
         <form method="post" action='./insertion.php'>
             <label for="nom">Nom</label><br>
-            <input type="text" name="nom" id="nom"><br>
-            <label for="nom2">Categorie</label><br>
-            <select name="categorie" id="categorie">
-                <option value="aliment">aliment</option>
-                <option value="champ">champ</option>
-                <option value="industriel">industriel</option>
-            </select><br>
-            <!-- <input type="select" name="categorie" id="nom2"><br> -->
-            <label for="nom3">Pu</label><br>
-            <input type="number" name="pu" id="nom3"><br>
-            <div style="display: none;">
+            <input type="text" name="nom" id="nom" placeholder="ex : KATSUVA MALAMBO VATSU"><br>
+            <div class="radio">
                 <label for="addition" class="label">
-                    <input type="radio" name="sexe" id="addition" value="masculin"> <span>Masculin</span></label>
+                    <input type="radio" name="sexe" checked id="addition" value="masculin"> <span>Masculin</span></label>
                 <label for="sousstraction" class="label">
                     <input type="radio" name="sexe" id="sousstraction" value="feminin"> <span>Feminin</span> </label>
-                <!-- <label for="division" class="label">
-                    <input type="radio" name="signe" id="division" value="division"> <span>/</span></label>
-                <label for="multiplication" class="label">
-                    <input type="radio" name="signe" id="multiplication" value="multiplication"> <span>*</span> </label>
-                <label for="modulo" class="label">
-                    <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label> -->
-            </div>
+            </div><br>
+            <label for="nationalite">Nationalite</label><br>
+            <select name="nationalite" id="nationalite">
+                <option value="congolais">Congolais</option>
+                <option value="ugandais">Ugandais</option>
+                <option value="malien">Malien</option>
+                <option value="camerounais">Camerounais</option>
+                <option value="togolais">Togolais</option>
+                <option value="buroundais">Buroundais</option>
+            </select><br>
+            <!-- <input type="select" name="categorie" id="nom2"><br> -->
+            <label for="age">age</label><br>
+            <input type="number" name="age" id="age" placeholder="ex : 21"><br>
+            <label for="age">Tel</label><br>
+            <input type="number" name="tel" id="tel" placeholder="ex : +243 000 000 000"><br>
+            
             <div class="buttons">
-                <button name="envoyer" type="submit">Evoyer</button>
-                <!-- <button name='modifier'>Modifier</button>
-                    <button name='supprimer'>Supprimer</button> -->
+                <button name="envoyer">Evoyer</button>
+                <button name='modifier'>Modifier</button>
+                <button name='supprimer'>Supprimer</button>
+                <button name='afficher'>afficher</button>
             </div>
         </form>
 
