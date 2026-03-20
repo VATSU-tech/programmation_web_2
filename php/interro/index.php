@@ -22,6 +22,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
             $enregistrer = $connexion->prepare($sql);
             $enregistrer->execute(array($nom, $sexe, $nationalite, $age, $telephone) );
             break;
+        case "supprimer":
+            if($id) {
+                $sql = "DELETE FROM t_etudiant WHERE id=?";
+                $supprimer = $connexion->prepare($sql);
+                $id = $supprimer->execute(array($id));
+            }
+            break;
     }
 }
 
@@ -72,8 +79,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
             
             <div class="buttons">
                 <button name="action" value="enregistrer">Enregistrer</button>
-                <button name='action' value="modifier">Modifier</button>
-                <button name='action' value="supprimer">Supprimer</button>
+                <button name="action" value="modifier">Modifier</button>
+                <button name="action" value="supprimer">Supprimer</button>
             </div>
         </form>
 
