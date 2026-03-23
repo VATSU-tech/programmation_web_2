@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../../style/index.css">
@@ -17,22 +17,18 @@
     </header>
     <main>    <form method="post" action='./login.php'>
       <div class="login_img">
-        <img style="height: 100%;" src="https://avatars.githubusercontent.com/u/179384838?v=4&size=64" alt="user">
+        <img style="height: 100%;" src="<?php $_SESSION['profil_link']?>" alt="<?php $_SESSION['username'] ?>">
       </div><br>
      <div style="margin: auto;"> <h2>Bienvenue <span style="color: var(--color);">user</span></h2></div><br>
       <label for="nom">Adresse mail</label><br>
-      <input type="text" name="nom" id="nom"><br>
+      <input type="text" required name="nom" id="nom" value="<?php $_SESSION['email']?>"><br>
       <label for="password">Mot de passe</label><br>
-      <input type="password" name="password" id="password"><br>
+      <input type="password" required name="password" id="password"><br>
       <div class="buttons">
         <button name="envoyer">Se connecter</button>
       </div>
       <span>pas de compte <a href="signup.php">S'inscrire</a></span>
     </form>
-
-        <?php
-        ?>
-
     </main>
     <footer>
         <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
