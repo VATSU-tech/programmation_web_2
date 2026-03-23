@@ -17,11 +17,11 @@
     </header>
     <main>    <form method="post" action='./login.php'>
       <div class="login_img">
-        <img style="height: 100%;" src="<?php $_SESSION['profil_link']?>" alt="<?php $_SESSION['username'] ?>">
+        <img style="height: 100%;" src="<?php echo $_SESSION['profil_link']?>" alt="<?php echo $_SESSION['username'] ?>">
       </div><br>
-     <div style="margin: auto;"> <h2>Bienvenue <span style="color: var(--color);">user</span></h2></div><br>
-      <label for="nom">Adresse mail</label><br>
-      <input type="text" required name="nom" id="nom" value="<?php $_SESSION['email']?>"><br>
+     <div style="margin: auto;"> <h2>Bienvenue <span style="color: var(--color);"><?php echo $_SESSION['username']?></span></h2></div><br>
+      <label for="email">Adresse mail</label><br>
+      <input type="email" required name="email" id="email" value="<?php echo $_SESSION['email']?>"><br>
       <label for="password">Mot de passe</label><br>
       <input type="password" required name="password" id="password"><br>
       <div class="buttons">
