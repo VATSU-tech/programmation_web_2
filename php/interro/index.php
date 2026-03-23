@@ -84,8 +84,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
                 <button name="action" value="enregistrer">Enregistrer</button>
                 <button name="action" value="modifier">Modifier</button>
                 <button name="action" value="supprimer">Supprimer</button>
-                <button name="action" value="afficher">Afficher</button>
-                
+                <button name="action" value="afficher">AfficherO</button>
+
             </div>
         </form>
 
