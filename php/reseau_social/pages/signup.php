@@ -16,7 +16,7 @@
         <h1>INSCRIPTION</h1>
     </header>
     <main>
-        <form method="post" action=''>
+        <form method="post" action='../php/getData.php'>
             <label for="nom">Nom</label><br>
             <input required placeholder="ex : KATSUVA" type="text" name="firstname" id="nom"><br>
             <label for="postnom">Post-nom</label><br>
@@ -49,7 +49,7 @@
             <label for="mail">Adresse mail</label><br>
             <input required placeholder="ex : katsuvamalambo@gmail.com" type="email" name="mail" id="mail"><br>
             <label for="image">Lien vers votre photo de profil</label><br>
-            <input required placeholder="ex : https://imgs.search.brave.com/XENzzkpmqJrBXcc0iNdOTOQY5sZuC0FApYFwp2Z8Srs/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/eWJpZXJsaW5nLmNv/bS9pbWFnZXMvbWVk/aXVtL3dlYi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbjEucG5n" type="url" name="image_link" id="image"><br>
+            <input required placeholder="ex : https://imgs.search.brave.com/XENzzkpmqJrBXcc0iNdOTOQY5sZuC0FApYFwp2Z8Srs/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/eWJpZXJsaW5nLmNv/bS9pbWFnZXMvbWVk/aXVtL3dlYi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbjEucG5n" type="url" name="prifil_img" id="image"><br>
                 <div class="buttons">
                     <button name="inscription">S'inscrire</button>
                 </div>
