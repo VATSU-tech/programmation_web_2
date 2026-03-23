@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -17,7 +18,7 @@
         <h1>Dashboard</h1>
     </header>
     <main>
-        <h1>Nom d'utilisateur : <?php $_SESSION['username']  ?></h1>
+        <h1>Nom d'utilisateur : <?php echo $_SESSION['username'];  ?></h1>
     </main>
     <footer>
         <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
