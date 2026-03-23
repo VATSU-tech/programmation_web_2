@@ -102,6 +102,11 @@ button{
   font-weight: 500;
   border-bottom: 1px solid black;
 }
+.radio{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 .buttons{
   display: flex;
