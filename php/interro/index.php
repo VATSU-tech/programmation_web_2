@@ -35,11 +35,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
                 $modifier = $connexion->prepare($sql);
                 $modifier->execute(array($nom, $sexe, $nationalite, $age, $telephone, $id));
             }
-            break;
-    }
-}
-
-?><!DOCTYPE html>
+            break;?><!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -88,6 +84,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
                 <button name="action" value="enregistrer">Enregistrer</button>
                 <button name="action" value="modifier">Modifier</button>
                 <button name="action" value="supprimer">Supprimer</button>
+                <button name="action" value="afficher">Afficher</button>
+                
             </div>
         </form>
 
@@ -98,4 +96,10 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
     </footer>
 </body>
 
-</html>
+</html><?php
+
+    case 'afficher': 
+    }
+}
+
+?>
