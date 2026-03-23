@@ -22,8 +22,8 @@
             <input type="text" name="nom" id="nom"><br>
             <label for="password">Mot de passe</label><br>
             <input type="password" name="password" id="password"><br>
-            <label for="mail">Adresse mail</label><br>
-            <input type="email" name="mail" id="mail"><br>
+            <!-- <label for="mail">Adresse mail</label><br>
+            <input type="email" name="mail" id="mail"><br> -->
             <!-- <div >
                 <label for="addition" class="label">
                     <input type="radio" name="sexe" id="addition" value="masculin"> <span>Masculin</span></label>
