@@ -25,7 +25,7 @@
             <input required placeholder="ex : vatsu04" type="text" name="username" id="username"><br>
             <label for="password">Mot de passe</label><br>
             <input required placeholder="ex : 123456789" type="password" name="password" id="password"><br>
-            <div class="password_strong"></div><br>
+            <div class="password_strong"><div></div></div><br>
             <label for="date">Date de naissance</label><br>
             <input required type="date" name="date_naissance" id="date"><br>
             <div class="radio">

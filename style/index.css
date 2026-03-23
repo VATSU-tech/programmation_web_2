@@ -130,9 +130,15 @@ button{
 }
 
 .password_strong{
+  display: flex;
   width: 100%;
   background-color: transparent;
   height: 5px;
   border-radius: 1rem;
   border: 1px solid var(--color);
+}
+
+.password_strong > div{
+  width: 10%;
+  background-color: red;
 }
