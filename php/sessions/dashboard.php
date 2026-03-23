@@ -19,6 +19,7 @@
     </header>
     <main>
         <h1>Nom d'utilisateur : <?php echo $_SESSION['username'];  ?></h1>
+        <h1>Mot de passe : <?php echo $_SESSION['password'] ?></h1>
     </main>
     <footer>
         <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>

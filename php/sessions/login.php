@@ -6,6 +6,7 @@ if(isset($_POST["nom"]) && isset($_POST["password"])){
 
     if($username == "admin" && $password == "1234"){
         $_SESSION["username"] = $username;
+        $_SESSION["password"] = $password;
         
         header('Location: ./dashboard.php');
     }else echo'Mot de passe ou nom d\'utilisateur incorect';
