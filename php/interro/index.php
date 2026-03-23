@@ -60,7 +60,7 @@
                 <th>Telephone</th>
                 <th>Nationnalite</th>
             </tr>
-            <tr class="elements">
+            
 
 <?php
 // Activation des erreurs pour le débogage
@@ -103,14 +103,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
     case 'afficher': 
         $sql = $connexion->query('SELECT * FROM t_etudiant');
         while($ligne = $sql->fetch()){
-            echo'<td>'.$ligne['id'].' </td><td>'.$ligne['nom'].'</td><td>'.$ligne['sexe'].'</td><td>'.$ligne['nationalite'].'</td><td>'.$ligne['age'].'</td><td>'.$ligne['telephone'].'<td/>';
+            echo'<tr class="resultat"><td>'.$ligne['id'].' </td><td>'.$ligne['nom'].'</td><td>'.$ligne['sexe'].'</td><td>'.$ligne['nationalite'].'</td><td>'.$ligne['age'].'</td><td>'.$ligne['telephone'].'<td/></tr>';
         }
         break;
     }
 }
 
 ?>
-            </tr>
+            
         </table>
     </main>
     <footer>
