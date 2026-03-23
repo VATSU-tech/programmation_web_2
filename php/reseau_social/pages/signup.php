@@ -16,23 +16,24 @@
         <h1>INSCRIPTION</h1>
     </header>
     <main>
-        <form method="post" action='./login.php'>
+        <form method="post" action=''>
             <label for="nom">Nom</label><br>
-            <input type="text" name="firstname" id="nom"><br>
+            <input required placeholder="ex : KATSUVA" type="text" name="firstname" id="nom"><br>
             <label for="postnom">Post-nom</label><br>
-            <input type="text" name="secondname" id="postnom"><br>
+            <input required placeholder="ex : MALAMBO" type="text" name="secondname" id="postnom"><br>
             <label for="username">Nom d'utilisateur</label><br>
-            <input type="text" name="username" id="username"><br>
+            <input required placeholder="ex : vatsu04" type="text" name="username" id="username"><br>
             <label for="password">Mot de passe</label><br>
-            <input type="password" name="password" id="password"><br>
+            <input required placeholder="ex : 123456789" type="password" name="password" id="password"><br>
+            <div class="password_strong"></div><br>
             <label for="date">Date de naissance</label><br>
-            <input type="date" name="date_naissance" id="date"><br>
+            <input required type="date" name="date_naissance" id="date"><br>
             <div class="radio">
                 <span>Genre : </span>
                 <label for="masculin" class="label">
-                    <input type="radio" name="sexe" checked id="masculin" value="masculin"> <span> Masculin</span></label>
+                    <input  type="radio" name="sexe" checked id="masculin" value="masculin"> <span> Masculin</span></label>
                 <label for="feminin" class="label">
-                    <input type="radio" name="sexe" id="feminin" value="feminin"> <span>Feminin</span> </label>
+                    <input  type="radio" name="sexe" id="feminin" value="feminin"> <span>Feminin</span> </label>
             </div><br>
             <label for="nationalite">Nationalite</label><br>
             <select name="nationalite" id="nationalite">
@@ -44,13 +45,13 @@
                 <option value="buroundais">Buroundais</option>
             </select><br>
             <label for="phone">Telephone</label><br>
-            <input type="number" name="phone" id="phone"><br>
+            <input required placeholder="ex : +243 123 456 789" type="number" name="phone" id="phone"><br>
             <label for="mail">Adresse mail</label><br>
-            <input type="email" name="mail" id="mail"><br>
+            <input required placeholder="ex : katsuvamalambo@gmail.com" type="email" name="mail" id="mail"><br>
             <label for="image">Lien vers votre photo de profil</label><br>
-            <input type="url" name="image_link" id="image"><br>
+            <input required placeholder="ex : https://imgs.search.brave.com/XENzzkpmqJrBXcc0iNdOTOQY5sZuC0FApYFwp2Z8Srs/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/eWJpZXJsaW5nLmNv/bS9pbWFnZXMvbWVk/aXVtL3dlYi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbjEucG5n" type="url" name="image_link" id="image"><br>
                 <div class="buttons">
-                    <button name="envoyer">S'inscrire</button>
+                    <button name="inscription">S'inscrire</button>
                 </div>
                 <span>j'ai un compte <a href="login.php">Se connecter</a></span>
         </form>
