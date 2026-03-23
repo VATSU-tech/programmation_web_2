@@ -17,7 +17,7 @@
         <h1>Programmation web 2: sessions / cookies</h1>
     </header>
     <main>
-        <form method="post" action=''>
+        <form method="post" action='./login.php'>
             <label for="nom">Noms</label><br>
             <input type="text" name="nom" id="nom"><br>
             <label for="password">Mot de passe</label><br>
