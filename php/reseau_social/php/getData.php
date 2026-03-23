@@ -1,5 +1,6 @@
 <?php
 session_start();
+include("./connexion.php");
 if (isset($_POST["firstname"]) && $_POST["lastname"] && isset($_POST["username"]) && isset($_POST["password"]) && isset($_POST["date_naissance"]) && isset($_POST["sexe"]) && isset($_POST["nationalite"]) && isset($_POST["phone"]) && isset($_POST["profil_img"]) && isset($_POST["mail"])) {
     $firstname = $_POST["firstname"];
     $lastname = $_POST["lastname"];
@@ -15,6 +16,9 @@ if (isset($_POST["firstname"]) && $_POST["lastname"] && isset($_POST["username"]
     $_SESSION['username'] = $username;
     $_SESSION['profil_link'] = $profil_link;
     $_SESSION['email'] = $email;
+
+    $requet = $connection->prepare("INSERT INTO user (firstname, lastname, username, profil_img, date_naissance, sexe, nationalite, phone, email, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $requet->execute(array($firstname, $lastname, $username, $profil_link, $dateNaissance, $sexe, $nationalite, $phone, $email, $password));
 
     header('location: ../pages/login.php');
 } else
