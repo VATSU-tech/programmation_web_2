@@ -35,9 +35,13 @@ a{
   text-decoration: none;
   color: white;
 }
+a:hover{
+  text-decoration: underline;
+}
 
-a:hover::before{
+.git:hover::before{
   content: 'acceder au code source';
+  text-decoration: none;
   display: inline-block;
   display:block;
   margin:0 0 0 400px;
