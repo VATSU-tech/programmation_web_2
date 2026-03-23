@@ -17,29 +17,23 @@
         <h1>Programmation web 2: sessions / cookies</h1>
     </header>
     <main>
-        <form method="post" action='./insertion.php'>
-            <label for="nom">Matricule</label><br>
-            <input type="text" name="matricule" id="nom"><br>
-            <label for="nom2">Noms</label><br>
-            <input type="text" name="noms" id="nom2"><br>
-            <label for="nom3">age</label><br>
-            <input type="number" name="age" id="nom3"><br>
-            <div >
+        <form method="post" action=''>
+            <label for="nom">Noms</label><br>
+            <input type="text" name="nom" id="nom"><br>
+            <label for="password">Mot de passe</label><br>
+            <input type="password" name="password" id="password"><br>
+            <label for="mail">Adresse mail</label><br>
+            <input type="email" name="mail" id="mail"><br>
+            <!-- <div >
                 <label for="addition" class="label">
                     <input type="radio" name="sexe" id="addition" value="masculin"> <span>Masculin</span></label>
                 <label for="sousstraction" class="label">
                     <input type="radio" name="sexe" id="sousstraction" value="feminin"> <span>Feminin</span> </label>
-                <!-- <label for="division" class="label">
-                    <input type="radio" name="signe" id="division" value="division"> <span>/</span></label>
-                <label for="multiplication" class="label">
-                    <input type="radio" name="signe" id="multiplication" value="multiplication"> <span>*</span> </label>
-                <label for="modulo" class="label">
-                    <input type="radio" name="signe" id="modulo" value="modulo"> <span>%</span></label> -->
-                </div>
+                </div> -->
                 <div class="buttons">
                     <button name="envoyer">Evoyer</button>
-                    <button name='modifier'>Modifier</button>
-                    <button name='supprimer'>Supprimer</button>
+                    <!-- <button name='modifier'>Modifier</button>
+                    <button name='supprimer'>Supprimer</button> -->
                 </div>
         </form>
 
