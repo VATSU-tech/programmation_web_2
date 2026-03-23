@@ -1,41 +1,4 @@
-<?php 
-// Activation des erreurs pour le débogage
-try {
-    $connexion = new PDO("mysql:host=localhost;dbname=DB_crud_php",'root','', [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
-
-if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
-    $id = $_POST["id"];
-    $nom = $_POST["nom"];
-    $sexe = $_POST["sexe"];
-    $nationalite = $_POST["nationalite"];
-    $age = $_POST["age"];
-    $telephone = $_POST["telephone"];
-
-    switch($_POST["action"]) {
-        case "enregistrer":
-            $sql = "INSERT INTO t_etudiant(nom, sexe, nationalite, age, telephone) VALUES(?, ?, ?, ?, ?)";
-            $enregistrer = $connexion->prepare($sql);
-            $enregistrer->execute(array($nom, $sexe, $nationalite, $age, $telephone) );
-            break;
-        case "supprimer":
-            if($id) {
-                $sql = "DELETE FROM t_etudiant WHERE id=?";
-                $supprimer = $connexion->prepare($sql);
-                $id = $supprimer->execute(array($id));
-            }
-            break;
-        case "modifier":
-            if($id){
-                $sql = "UPDATE t_etudiant SET nom=?, sexe=?, nationalite=?, age=?, telephone=? WHERE id=?";
-                $modifier = $connexion->prepare($sql);
-                $modifier->execute(array($nom, $sexe, $nationalite, $age, $telephone, $id));
-            }
-            break;?><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -96,9 +59,51 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
     </footer>
 </body>
 
-</html><?php
+</html>
+<?php
+// Activation des erreurs pour le débogage
+try {
+    $connexion = new PDO("mysql:host=localhost;dbname=DB_crud_php",'root','', [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+    ]);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}
 
+if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
+    $id = $_POST["id"];
+    $nom = $_POST["nom"];
+    $sexe = $_POST["sexe"];
+    $nationalite = $_POST["nationalite"];
+    $age = $_POST["age"];
+    $telephone = $_POST["telephone"];
+
+    switch($_POST["action"]) {
+        case "enregistrer":
+            $sql = "INSERT INTO t_etudiant(nom, sexe, nationalite, age, telephone) VALUES(?, ?, ?, ?, ?)";
+            $enregistrer = $connexion->prepare($sql);
+            $enregistrer->execute(array($nom, $sexe, $nationalite, $age, $telephone) );
+            break;
+        case "supprimer":
+            if($id) {
+                $sql = "DELETE FROM t_etudiant WHERE id=?";
+                $supprimer = $connexion->prepare($sql);
+                $id = $supprimer->execute(array($id));
+            }
+            break;
+        case "modifier":
+            if($id){
+                $sql = "UPDATE t_etudiant SET nom=?, sexe=?, nationalite=?, age=?, telephone=? WHERE id=?";
+                $modifier = $connexion->prepare($sql);
+                $modifier->execute(array($nom, $sexe, $nationalite, $age, $telephone, $id));
+            }
+            break;
     case 'afficher': 
+        $sql = $connexion->query('SELECT * FROM t_etudiant');
+        while($ligne = $sql->fetch()){
+            echo'id : '.$ligne.['id'].'';
+        }
+        break;
     }
 }
 
