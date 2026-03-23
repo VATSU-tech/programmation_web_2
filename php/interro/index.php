@@ -53,13 +53,6 @@
         </form>
 
 
-    </main>
-    <footer>
-        <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
-    </footer>
-</body>
-
-</html>
 <?php
 // Activation des erreurs pour le débogage
 try {
@@ -100,11 +93,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
             break;
     case 'afficher': 
         $sql = $connexion->query('SELECT * FROM t_etudiant');
+        echo'<div class="resultat">';
         while($ligne = $sql->fetch()){
-            echo'id : '.$ligne.['id'].'';
+            echo'<div class="resultat">';
+            echo'id : '.$ligne['id'].' Noms:'.$ligne['nom'].'sexe : '.$ligne['sexe'].'nationalite : '.$ligne['nationalite'].'age : '.$ligne['age'].'telephone : '.$ligne['telephone'].'<br/>';
+            echo'</div>';
         }
+        echo'</div>';
         break;
     }
 }
 
 ?>
+    </main>
+    <footer>
+        <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
+    </footer>
+</body>
+
+</html>
