@@ -51,7 +51,16 @@
 
             </div>
         </form>
-
+        <table class="resultat">
+            <tr>
+                <th>Id</th>
+                <th>Noms</th>
+                <th>Sexe</th>
+                <th>Age</th>
+                <th>Telephone</th>
+                <th>Nationnalite</th>
+            </tr>
+            <tr class="elements">
 
 <?php
 // Activation des erreurs pour le débogage
@@ -93,18 +102,16 @@ if($_SERVER["REQUEST_METHOD"] === "POST" && isset( $_POST["action"] )) {
             break;
     case 'afficher': 
         $sql = $connexion->query('SELECT * FROM t_etudiant');
-        echo'<div class="resultat">';
         while($ligne = $sql->fetch()){
-            echo'<div class="resultat">';
-            echo'id : '.$ligne['id'].' Noms:'.$ligne['nom'].'sexe : '.$ligne['sexe'].'nationalite : '.$ligne['nationalite'].'age : '.$ligne['age'].'telephone : '.$ligne['telephone'].'<br/>';
-            echo'</div>';
+            echo'<td>'.$ligne['id'].' </td><td>'.$ligne['nom'].'</td><td>'.$ligne['sexe'].'</td><td>'.$ligne['nationalite'].'</td><td>'.$ligne['age'].'</td><td>'.$ligne['telephone'].'<td/>';
         }
-        echo'</div>';
         break;
     }
 }
 
 ?>
+            </tr>
+        </table>
     </main>
     <footer>
         <a href="https://github.com/VATSU-tech/programmation_web_2">VATSU-tech <i class="fa-brands fa-github"></i></a>
