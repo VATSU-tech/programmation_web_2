@@ -17,8 +17,12 @@
     </header>
     <main>
         <form method="post" action='./login.php'>
-            <label for="nom">Noms</label><br>
-            <input type="text" name="username" id="nom"><br>
+            <label for="nom">Nom</label><br>
+            <input type="text" name="firstname" id="nom"><br>
+            <label for="postnom">Post-nom</label><br>
+            <input type="text" name="secondname" id="postnom"><br>
+            <label for="username">Nom d'utilisateur</label><br>
+            <input type="text" name="username" id="username"><br>
             <label for="password">Mot de passe</label><br>
             <input type="password" name="password" id="password"><br>
             <label for="date">Date de naissance</label><br>
