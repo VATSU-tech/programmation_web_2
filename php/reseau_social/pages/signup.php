@@ -50,10 +50,6 @@
                 </div>
                 <span>j'ai un compte <a href="login.php">Se connecter</a></span>
         </form>
-
-        <?php
-        ?>
-
     </main>
     <footer>
         <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>

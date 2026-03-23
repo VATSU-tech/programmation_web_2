@@ -15,17 +15,20 @@
     <header>
         <h1>CONNECTION</h1>
     </header>
-    <main>
-        <form method="post" action='./login.php'>
-            <label for="nom">Noms</label><br>
-            <input type="text" name="nom" id="nom"><br>
-            <label for="password">Mot de passe</label><br>
-            <input type="password" name="password" id="password"><br>
-                <div class="buttons">
-                    <button name="envoyer">Se connecter</button>
-                </div>
-                <span>pas de compte <a href="signup.php">S'inscrire</a></span>
-        </form>
+    <main>    <form method="post" action='./login.php'>
+      <div class="login_img">
+        <img style="height: 100%;" src="https://avatars.githubusercontent.com/u/179384838?v=4&size=64" alt="user">
+      </div><br>
+     <div style="margin: auto;"> <h2>Bienvenue <span style="color: var(--color);">user</span></h2></div><br>
+      <label for="nom">Adresse mail</label><br>
+      <input type="text" name="nom" id="nom"><br>
+      <label for="password">Mot de passe</label><br>
+      <input type="password" name="password" id="password"><br>
+      <div class="buttons">
+        <button name="envoyer">Se connecter</button>
+      </div>
+      <span>pas de compte <a href="signup.php">S'inscrire</a></span>
+    </form>
 
         <?php
         ?>
