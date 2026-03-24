@@ -14,6 +14,7 @@ if(isset($_POST["email"]) && isset($_POST['password'])){
             session_start();
             $_SESSION['email'] = $user['email'];
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
             $_SESSION['nationalite'] = $user['nationalite'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['lastname'] = $user['lastname'];
