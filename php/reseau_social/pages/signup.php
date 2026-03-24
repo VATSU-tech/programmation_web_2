@@ -1,3 +1,7 @@
+<?php
+require_once '../php/utils.php';
+$flash = get_flash();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -16,7 +20,13 @@
         <h1>INSCRIPTION</h1>
     </header>
     <main>
-        <form method="post" action='../php/getData.php'>
+        <?php if (!empty($flash)) { ?>
+            <div class="flash <?php echo e($flash['type']); ?>">
+                <?php echo e($flash['message']); ?>
+            </div>
+        <?php } ?>
+
+        <form method="post" action="../php/getData.php">
             <label for="nom">Nom</label><br>
             <input required placeholder="ex : KATSUVA" type="text" name="firstname" id="nom"><br>
             <label for="postnom">Post-nom</label><br>
@@ -31,9 +41,9 @@
             <div class="radio">
                 <span>Genre : </span>
                 <label for="masculin" class="label">
-                    <input  type="radio" name="sexe" checked id="masculin" value="masculin"> <span> Masculin</span></label>
+                    <input type="radio" name="sexe" checked id="masculin" value="masculin"> <span> Masculin</span></label>
                 <label for="feminin" class="label">
-                    <input  type="radio" name="sexe" id="feminin" value="feminin"> <span>Feminin</span> </label>
+                    <input type="radio" name="sexe" id="feminin" value="feminin"> <span>Feminin</span> </label>
             </div><br>
             <label for="nationalite">Nationalite</label><br>
             <select name="nationalite" id="nationalite">
@@ -50,10 +60,10 @@
             <input required placeholder="ex : katsuvamalambo@gmail.com" type="email" name="mail" id="mail"><br>
             <label for="image">Lien vers votre photo de profil</label><br>
             <input required placeholder="ex : https://imgs.search.brave.com/XENzzkpmqJrBXcc0iNdOTOQY5sZuC0FApYFwp2Z8Srs/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/eWJpZXJsaW5nLmNv/bS9pbWFnZXMvbWVk/aXVtL3dlYi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbi9hZGRm/b3JlaWdua2V5cGhw/bXlhZG1pbjEucG5n" type="url" name="profil_img" id="image"><br>
-                <div class="buttons">
-                    <button name="inscription">S'inscrire</button>
-                </div>
-                <span>j'ai un compte <a href="login.php">Se connecter</a></span>
+            <div class="buttons">
+                <button name="inscription">S'inscrire</button>
+            </div>
+            <span>j'ai un compte <a href="login.php">Se connecter</a></span>
         </form>
     </main>
     <footer>
