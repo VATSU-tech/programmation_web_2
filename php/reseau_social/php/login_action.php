@@ -18,6 +18,7 @@ if(isset($_POST["email"]) && isset($_POST['password'])){
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['lastname'] = $user['lastname'];
             $_SESSION['sexe'] = $user['sexe'];
+            $_SESSION['connecter'] = true;
 
             header('location: ../pages/dashboard.php');
         }else{

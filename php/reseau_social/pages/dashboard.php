@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-<?php session_start(); ?>
+<?php session_start(); 
+if($_SESSION['connecter'] !== true) {
+    header('location: login.php');
+    exit();
+}
+?>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../../style/index.css">
@@ -17,6 +22,7 @@
     </header>
     <main>
         <h1>Bienvenue <?php echo $_SESSION['username'] ?></h1>
+        <button><a href="../php/deconnexion.php">Se deconnecter</a></button>
     </main>
     <footer>
         <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
