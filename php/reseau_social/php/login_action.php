@@ -8,7 +8,9 @@ if(isset($_POST["email"]) && isset($_POST['password'])){
         $login->execute(array($email));
         $user = $login->fetch(PDO::FETCH_ASSOC);
 
-        if($user && password_verify($password, $user['password'])){
+        echo $password.'   '.password_verify( $password, $user['mot_de_passe'] );
+
+        if($user && password_verify($password, $user['mot_de_passe'])){
             session_start();
             $_SESSION['email'] = $user['email'];
             $_SESSION['user_id'] = $user['id'];
