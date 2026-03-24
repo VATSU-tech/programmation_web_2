@@ -15,7 +15,7 @@
     <header>
         <h1>CONNECTION</h1>
     </header>
-    <main>    <form method="post" action='./login.php'>
+    <main>    <form method="post" action='../php/login_action.php'>
       <div class="login_img">
         <img style="height: 100%;" src="<?php echo $_SESSION['profil_link']?>" alt="<?php echo $_SESSION['username'] ?>">
       </div><br>
