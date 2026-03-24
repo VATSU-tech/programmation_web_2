@@ -17,6 +17,7 @@ if(isset($_POST["email"]) && isset($_POST['password'])){
             $_SESSION['nationalite'] = $user['nationalite'];
             $_SESSION['firstname'] = $user['firstname'];
             $_SESSION['lastname'] = $user['lastname'];
+            $_SESSION['sexe'] = $user['sexe'];
 
             header('location: ../pages/dashboard.php');
         }else{

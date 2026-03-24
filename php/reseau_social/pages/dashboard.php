@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php session_start(); ?>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../../../style/index.css">
@@ -16,7 +16,7 @@
         <h1>DASHBOARD</h1>
     </header>
     <main>
-        <h1>Bienvenue user</h1>
+        <h1>Bienvenue <?php echo $_SESSION['username'] ?></h1>
     </main>
     <footer>
         <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
