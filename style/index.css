@@ -27,6 +27,17 @@ header, footer{
   padding: 10px 0;
 }
 
+header> button{
+  margin: 0;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
 h1{
   border-bottom: 1px solid var(--color);
 }
@@ -40,7 +51,7 @@ a:hover{
 }
 
 .git:hover::before{
-  content: 'acceder au code source';
+  content: attr(data-hover);
   text-decoration: none;
   display: inline-block;
   display:block;

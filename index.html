@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<?php session_start(); 
+if($_SESSION['connecter'] !== true) {
+    header('location: login.php');
+    exit();
+}
+?>
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../../style/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>log in</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../../style/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil</title>
 </head>
 
 <body>
-  <header>
-    <h1>CONNECTION</h1>
-  </header>
-  <main>
-    <form method="post" action='./login.php'>
-      <div class="login_img">
-        <img style="height: 100%;" src="https://avatars.githubusercontent.com/u/179384838?v=4&size=64" alt="photo">
-      </div><br>
-     <div style="margin: auto;"> <h2>Bienvenue <span style="color: var(--color);">user</span></h2></div><br>
-      <label for="nom">Adresse mail</label><br>
-      <input type="text" name="nom" id="nom"><br>
-      <label for="password">Mot de passe</label><br>
-      <input type="password" name="password" id="password"><br>
-      <div class="password_strong"><div></div></div>
-      <div class="buttons">
-        <button name="envoyer">Se connecter</button>
-      </div>
-      <span>pas de compte <a href="signup.php">S'inscrire</a></span>
-    </form>
-
-  </main>
-  <footer>
-    <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
-  </footer>
+    <header>
+        <h1>DASHBOARD</h1>
+        <button><a href="../php/deconnexion.php">Se deconnecter <i class="fa-solid fa-arrow-right-from-bracket"></i></a></button>
+    </header>
+    <main>
+        <h1>Bienvenue <?php echo $_SESSION['username'] ?></h1>
+    </main>
+    <footer>
+        <a class="git" data-hover="acceder au code source" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
+    </footer>
 </body>
-
 </html>

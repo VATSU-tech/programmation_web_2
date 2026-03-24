@@ -18,15 +18,14 @@ if($_SESSION['connecter'] !== true) {
 
 <body>
     <header>
-        <h1>DASHBOARD</h1>
+        <h1><?php echo ucfirst($_SESSION['firstname']).' '.ucfirst($_SESSION['lastname']) ?></h1>
+        <button><a href="../php/deconnexion.php">Se deconnecter <i class="fa-solid fa-arrow-right-from-bracket"></i></a></button>
     </header>
     <main>
         <h1>Bienvenue <?php echo $_SESSION['username'] ?></h1>
-        <button><a href="../php/deconnexion.php">Se deconnecter</a></button>
     </main>
     <footer>
-        <a class="git" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
+        <a class="git" data-hover="acceder au code source" href="https://github.com/VATSU-tech/programmation_web_2">&COPY; VATSU-tech <i class="fa-brands fa-github"></i></a>
     </footer>
 </body>
-
 </html>
